@@ -414,7 +414,7 @@ public final class OpenSsl {
             libNames.add("netty_tcnative_" + os + '_' + arch + "_fedora");
         }
         // finally the default library.
-        libNames.add("netty_tcnative");
+        libNames.add("netty_tcnative_" + arch);
 
         NativeLibraryLoader.loadFirstAvailable(SSL.class.getClassLoader(),
             libNames.toArray(new String[libNames.size()]));
